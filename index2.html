@@ -3,85 +3,99 @@
     <head>
         <meta charset="utf-8">
         <title>Skater's Name</title>
-        <link rel="stylesheet" href="normalize.css" media="screen" title="no title">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/normalize.css" media="screen" title="no title">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title">
         <link rel="stylesheet" href="css/index2.css" media="screen" title="no title">
     </head>
     <body>
-
-        <nav class="navbar navbar-fixed-top" role="navigation">
-            <div class="container">
+    <div class="container-fluid" id="header">
+        <div class="navbar" role="navigation">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavigation">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                <div class="navbar-header" id="brand">
+                    <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavigation"> -->
+                        <!-- <span class="sr-only">Toggle navigation</span> -->
+                        <!-- <span class="icon-bar"></span> -->
+                        <!-- <span class="icon-bar"></span> -->
+                        <!-- <span class="icon-bar"></span> -->
                     </button>
                     <a class="navbar-brand" href="#"><img src="content/site_logo.png" alt="Shready Logo"/></a>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="mainNavigation">
                     <ul class="nav navbar-nav">
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Riders</a></li>
+                        <li><a href="#">Spots</a></li>
+                        <li><a href="#">Sign up</a></li>
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container -->
-        </nav>
+                    <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </div>
 
-        <!-- Full Page Image Background Carousel Header -->
-        <header id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-wrap="true">
+    <!-- Full Page Image Background Carousel Header -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-wrap="true">
 
-            <!-- Wrapper for Slides -->
-            <div class="carousel-inner">
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
 
-                <div class="item active">
-                <!-- Set the first background image using inline CSS below. -->
-                    <div class="fill" style="background-image:url('/assets/citibike1');"></div>
-                </div>
-
-                <div class="item">
-                <!-- Set the second background image using inline CSS below. -->
-                    <div class="fill" style="background-image:url('/assets/citibike2');"></div>
-                </div>
-
-                <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
-                    <div class="fill" style="background-image:url('/assets/citibike4');"></div>
-                </div>
-
-            </div>
-        </header>
-
-        <!-- Page Content -->
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1></h1>
-                    <p></p>
-                </div>
+            <!-- Set the first background image using inline CSS below. -->
+            <div class="item active">
+                <div class="fill" style="background-image:url('content/banner0.png');"></div>
+                <div class="carousel-caption"><h1>Use Shready to connect with your friends. See where your friends are shredding.</h1></div>
             </div>
 
-            <hr>
-            <!-- Footer -->
-            <footer>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p>Copyright &copy; NyCycles</p>
-                    </div>
-                </div>
-                <!-- /.row -->
-            </footer>
+            <div class="item">
+            <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('content/banner1.png');"></div>
+                <div class="carousel-caption"><h1>Promote your event
+Whether you are hosting a BBQ or a demo, use Shready to let other shredders know.</h1></div>
+            </div>
+
+            <div class="item">
+            <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('content/banner2.png');"></div>
+                <div class="carousel-caption"><h1>Make History
+Live updating scorecard on public or legendary spots. Can you cement a place in history by doing an NBD on a legendary spot?</h1></div>
+            </div>
+
+            <div class="item">
+            <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('content/banner3.png');"></div>
+                <div class="carousel-caption"><h1>The Ultimate Shredding Database
+Street spots and skateparks from around the world can be found on Shready.</h1></div>
+            </div>
 
         </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+
+        <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Shready</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
     </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script type="text/javascript" src="javascript/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="profile.js"></script>
+    <script type="text/javascript" src="javascript/script.js"></script>
 </html>
