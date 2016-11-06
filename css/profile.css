@@ -21,8 +21,10 @@ div.navbar-fixed-left {
     padding-left: 160px;
 }
 
-div#content{
+div.content{
     margin-left: 150px;
+    position: relative;
+    
 }
 
 /* On using dropdown menu (To right shift popuped) */
