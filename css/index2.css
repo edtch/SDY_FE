@@ -2,7 +2,11 @@ html,
 body {
     height: 100%;
 }
+/****************************************/
+/***********     Carousel       *********/
+/****************************************/
 
+/*Needed for carousel*/
 .carousel,
 .item,
 .active {
@@ -27,40 +31,83 @@ body {
     -o-background-size: cover;
 }
 
+/*Vertically aligns caption in carousel*/
+div.carousel-caption{
+    bottom: 220px;
+    text-align: center;
+}
+
+
+/****************************************/
+/***********   Footer Styling   *********/
+/****************************************/
+
 footer {
     margin: 50px 0;
 }
 
+/****************************************/
+/***********   Navbar Styling   *********/
+/****************************************/
+
 div.navbar{
-    margin-bottom: 0;
-}
-div.container#brand{
-    border-bottom: black 2px solid;
-    width: 100%;
-    max-width: 100%;
-    float: none;
+    margin-bottom: 5px;
 }
 
+/*Aligns links to the right */
 div#mainNavigation > ul{
     float: right;
 }
+/*Vertically Aligns the nav links*/
 div#mainNavigation > ul > li > a{
-    padding-bottom: 0;
+    /*padding-bottom: 0;*/
+    letter-spacing: .09em;
     padding-top: 23px;
+    font-size: 16px;
 }
 
-div.caption{
-    text-align: center;
-    vertical-align: middle;
-    color: white;
-    height: inherit;
-}
+/****************************************/
+/***********Page Content Styling*********/
+/****************************************/
 
+/*Aligns width with rest of the page*/
 div.row{
     margin-left: 0px;
     margin-right: 0px;
 }
 
-div.carousel-caption{
-    bottom: 200px;
+
+
+/*Center Content text*/
+.center{
+    text-align: center;
+}
+
+/*Centers links under Content text*/
+a.center-a{
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+
+/*Adds margins to rows to even out styling*/
+.marginContent{
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+
+.AppStoreIcon{
+    margin-top: 25px;
+    width: 250px;
+}
+
+footer{
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+hr{
+    border: black solid 1px;
+    width: 100%;
+    max-width:1262px;
 }
