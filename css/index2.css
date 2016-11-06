@@ -7,14 +7,12 @@ body {
 .item,
 .active {
     height: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+    /*padding-left: 15px;*/
+    /*padding-right: 15px;*/
 }
 
 .carousel-inner {
     height: 100%;
-    /*padding-left: 15px;*/
-    /*padding-right: 15px;*/
 }
 
 /* Background images are set within the HTML using inline CSS, not here */
@@ -33,25 +31,22 @@ footer {
     margin: 50px 0;
 }
 
-/*nav.navbar{
+div.navbar{
     margin-bottom: 0;
-}*/
+}
 div.container#brand{
     border-bottom: black 2px solid;
     width: 100%;
     max-width: 100%;
     float: none;
 }
-div#mainNavigation{
-    text-align: center;
-    float: none;
-}
+
 div#mainNavigation > ul{
-    float: none;
+    float: right;
 }
 div#mainNavigation > ul > li > a{
     padding-bottom: 0;
-    padding-top: 30px;
+    padding-top: 23px;
 }
 
 div.caption{
@@ -59,4 +54,13 @@ div.caption{
     vertical-align: middle;
     color: white;
     height: inherit;
+}
+
+div.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+div.carousel-caption{
+    bottom: 200px;
 }
