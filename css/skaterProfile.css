@@ -1,58 +1,9 @@
-html,
-body {
-    height: 100%;
-}
-/****************************************/
-/***********     Carousel       *********/
-/****************************************/
-
-/*Needed for carousel*/
-.carousel,
-.item,
-.active {
-    height: 100%;
-    /*padding-left: 15px;*/
-    /*padding-right: 15px;*/
-}
-
-.carousel-inner {
-    height: 100%;
-}
-
-/* Background images are set within the HTML using inline CSS, not here */
-
-.fill {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-/*Vertically aligns caption in carousel*/
-div.carousel-caption{
-    bottom: 220px;
-    text-align: center;
-}
-
-
-/****************************************/
-/***********   Footer Styling   *********/
-/****************************************/
-
-footer {
-    margin-top: 50px;
-    margin-bottom: 0;
-}
-
 /****************************************/
 /***********   Navbar Styling   *********/
 /****************************************/
 
 div.navbar{
-    margin-bottom: 0;
+    /*margin-bottom: 0;*/
 }
 
 /*Aligns links to the right */
@@ -66,6 +17,7 @@ div#mainNavigation > ul > li > a{
     padding-top: 23px;
     font-size: 16px;
 }
+
 /****************************************/
 /*********   Drop Down Styling   ********/
 /****************************************/
@@ -121,7 +73,6 @@ div#mainNavigation > ul > li > a{
         border-top:0 none;
     }
 }
-
 
 /****************************************/
 /***********Page Content Styling*********/
