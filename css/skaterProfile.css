@@ -124,3 +124,15 @@ hr{
 p{
     font-size: 16px;
 }
+
+/****************************************/
+/***********Page Content Styling*********/
+/****************************************/
+
+#test{
+    background: red;
+}
+
+.profileInfo{
+    background: blue;
+}

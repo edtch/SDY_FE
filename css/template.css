@@ -1,6 +1,6 @@
 div.navbar-fixed-left {
     width: 140px;
-    position: fixed;
+    position: relative;
     border-radius: 0;
     height: 100%;
     background-color: #c24641;
@@ -23,7 +23,7 @@ div.navbar-fixed-left {
 
 div.content{
     margin-left: 150px;
-    position: relative;
+    position: absolute;
 }
 
 ul.nav{
@@ -31,7 +31,7 @@ ul.nav{
     margin-top: 0;
 }
 
-.row{
+/*.row{
     margin-left:0px;
     margin-right:0px;
 }
@@ -177,7 +177,7 @@ ul.nav{
     transition: all .4s ease 0s;
 }
 }
-
+*/
 
 /* On using dropdown menu (To right shift popuped) */
 /*.navbar-fixed-left .navbar-nav > li > .dropdown-menu {

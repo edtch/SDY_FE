@@ -1,0 +1,95 @@
+div#PageContent {
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 300px);
+    width: 640px;
+    padding-bottom: 200px;
+}
+
+div.PageContent {
+    margin-left: calc(50% - 320px);
+    width: 640px;
+}
+
+div.PageContent:nth-child(2) {
+    margin-top: 100px;
+    margin-bottom: 25px;
+}
+
+div.PageContent:nth-last-child(1) {
+    margin-bottom: 100px;
+}
+
+div#PageContent div.NavgridPart {
+    display: inline-block;
+    height: 180px;
+    width: 180px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    transition: -webkit-transform 500ms, transform 500ms;
+    padding: 10px;
+    font: 14px Arial;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #c24641;
+}
+
+div#PageContent div.NavgridPart:nth-last-child(1) {
+    margin-right: 0px;
+}
+
+div#PageContent div.NavgridPart:hover {
+    -webkit-transform: scale(1.10);
+    transform: scale(1.10);
+}
+
+span.Normal {
+    font: 12px Arial;
+}
+
+span.Normal2 {
+    font: 14px Arial;
+}
+
+span.WSTitle {
+    font: 36px Arial;
+}
+
+span.WSSubTitle {
+    font: 28px Arial;
+}
+
+img.AppStoreIcon {
+    height: 40px;
+    width: 134px;
+}
+
+div#DownloadInvite {
+    width: 100%;
+    padding: 10px;
+    font: 14px Arial;
+    border-radius: 5px;
+    background-color: #d9d9d9;
+    margin-bottom: 15px;
+}
+
+div.WideScreenPageContent {
+    width: 100%;
+    padding-top: 100px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+div.ApplyPartialGrayscaleFilter {
+    filter: grayscale(50%);
+}
+
+div.SlideCard {
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    left: 50%;
+    margin-left: -480px;
+    width: 960px;
+}
