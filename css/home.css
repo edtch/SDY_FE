@@ -2,6 +2,11 @@ html,
 body {
     height: 100%;
 }
+
+div.container-fluid{
+    /*padding-left: 0;*/
+    /*padding-right: 0;*/
+}
 /****************************************/
 /***********     Carousel       *********/
 /****************************************/
@@ -11,8 +16,9 @@ body {
 .item,
 .active {
     height: 100%;
-    /*padding-left: 15px;*/
-    /*padding-right: 15px;*/
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: black;
 }
 
 .carousel-inner {
@@ -55,10 +61,6 @@ div.navbar{
     margin-bottom: 0;
 }
 
-/*Aligns links to the right */
-div#mainNavigation > ul{
-    /*float: right;*/
-}
 /*Vertically Aligns the nav links*/
 div#mainNavigation > ul > li > a{
     /*padding-bottom: 0;*/
@@ -167,7 +169,7 @@ a.center-a{
 hr{
     border: black solid 1px;
     width: 100%;
-    max-width:1262px;
+    /*max-width:1262px;*/
 }
 
 p{

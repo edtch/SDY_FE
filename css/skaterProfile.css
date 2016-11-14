@@ -80,8 +80,8 @@ div#mainNavigation > ul > li > a{
 
 /*Aligns width with rest of the page*/
 div.row{
-    margin-left: 0px;
-    margin-right: 0px;
+    /*margin-left: 0px;*/
+    /*margin-right: 0px;*/
 }
 
 .spacing{
