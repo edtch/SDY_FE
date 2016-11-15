@@ -129,10 +129,10 @@ p{
 /***********Page Content Styling*********/
 /****************************************/
 
-#test{
-    background: red;
+#userInfoDiv{
+    /*background-color: lightblue;*/
 }
 
 .profileInfo{
-    background: blue;
+    /*background: blue;*/
 }
