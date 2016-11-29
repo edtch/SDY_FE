@@ -10,100 +10,69 @@
         <link rel="stylesheet" href="css/register.css" media="screen" title="no title">
     </head>
     <body>
-    <div class="container-fluid" id="header">
-        <div class="navbar" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header" id="brand">
-                    <a class="navbar-brand" href="#"><img class="img-fluid" src="content/site_logo.png" alt="Shready Logo"/></a>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                </div>
-                <div class="collapse navbar-collapse" id="mainNavigation">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#">About Shready</a></li>
-                        <li><a href="#">Shredded Goods</a></li>
-                        <li><a href="#">Leaderboards</a></li>
-                        <li><a href="#">Wiki</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Login/Register <span class="caret"></span></a>
-                            <ul id="login-dp" class="dropdown-menu">
-                                <li>
-                                    <div class="row">
-    							        <div class="col-md-12">
-    								        Login via
-    								        <div class="social-buttons">
-    									        <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-    									        <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
-    								        </div>
-                                            <hr>
-                                            <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-    										<div class="form-group">
-    											 <label class="sr-only" for="exampleInputEmail2">Email address</label>
-    											 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-    										</div>
-    										<div class="form-group">
-    											 <label class="sr-only" for="exampleInputPassword2">Password</label>
-    											 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                                 <div class="help-block text-right"><a href="">Forget the password ?</a></div>
-    										</div>
-    										<div class="form-group">
-    											 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-    										</div>
-    										<div class="checkbox">
-    											 <label>
-    											 <input type="checkbox"> Keep me logged-in.
-    											 </label>
-    										</div>
-    								 </form>
-    							    </div>
-    							    <div class="bottom text-center">
-    								    New here ? <a href="#"><b>Join Us</b></a>
-    							    </div>
-                                </div>
-                            </li>
+        <div class="container-fluid" id="header">
+            <div class="navbar" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header" id="brand">
+                        <a class="navbar-brand" href="#"><img class="img-fluid" src="content/site_logo.png" alt="Shready Logo"/></a>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                    </div>
+                    <div class="collapse navbar-collapse" id="mainNavigation">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">About Shready</a></li>
+                            <li><a href="#">Shredded Goods</a></li>
+                            <li><a href="#">Leaderboards</a></li>
+                            <li><a href="#">Wiki</a></li>
                         </ul>
-                    </li>
-                </ul>
+                    </div>
+                <!-- /.navbar-collapse -->
             </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </div>
-
-    <!-- Page Content -->
-    <div class="container-fluid">
-        <div>
-            <h1>Sign up for free!</h1>
-            <!-- action="http://www.nullster.com/ssds/19EA4B39-2221-45CD-A954-2281000AEDBE0EF/ept/redpill/modules/server/user/create" -->
-            <form action="#" method="POST" autocomplete="on">
-
-                <label>Email Address <input type="email" name="email" required/></label>
-                <label>Password <input type="password" name="password" required/></label>
-                <label>Confirm Password <input type="password" name="confirmPassword" required/></label>
-                <label>First Name <input type="text" name="firstName" required/></label>
-                <label>Last Name <input type="text" name="lastName" required/></label>
-                <label>Date of Birth<input type="date" name="dateOfBirth" required/></label>
-
-                <input type="submit" id="submit"/>
-                <span class="privacy-policy">
-                <input type="checkbox" name="privacy-checkbox">  You agree to our Terms and Policy.
-                </span>
-            </form>
+            <!-- /.container -->
         </div>
 
-        <!-- Footer -->
-        <footer>
+        <!-- Page Content -->
+        <div class="container-fluid">
+
             <div class="row">
-                <div class="col-lg-12">
-                    <p>
-                        Copyright &copy; 2016 Shready LLC. All rights reserved.
-                    </p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
+                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
 
-    </div>
+                </div>
+
+                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 center">
+                    <h1>Sign up for free!</h1>
+                    <form id="mainForm" autocomplete="on">
+
+                        <label><input type="email" name="email" placeholder="Email Address" required/> <span hidden="true" id="errorEmail" class="errorSpan">!</span></label>
+                        <label><input type="password" name="password" placeholder="Password" required/><span hidden="true" id="errorPassword" class="errorSpan">!</span></label>
+                        <label><input type="password" name="confirmPassword" placeholder="Confirm Password" required/><span hidden="true" id="errorConfirmPassword" class="errorSpan">!</span></label>
+                        <label><input type="text" name="firstName" placeholder="First Name" required/><span hidden="true" id="errorFirstName" class="errorSpan">!</span></label>
+                        <label><input type="text" name="lastName" placeholder="Last Name" required/><span hidden="true" id="errorLastName" class="errorSpan">!</span></label>
+                        <label><input type="date" name="dateOfBirth" placeholder="Date of Birth" required/><span hidden="true" id="errorDateOfBirth" class="errorSpan">!</span></label>
+
+                        <input type="submit" id="submit"/> <br>
+                        <span class="privacy-policy">
+                            <input type="checkbox" name="privacy-checkbox"> You agree to our Terms and Policy.
+                        </span>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="row">
+            <footer>
+                    <div class="col-lg-4">
+                        <p>
+                            Copyright &copy; 2016 Shready LLC. All rights reserved.
+                        </p>
+                    </div>
+                <!-- /.row -->
+            </footer>
+            </div>
+            <!-- Eof Footer -->
+
+        </div>
+    <!-- Eof Page Content -->
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

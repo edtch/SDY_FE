@@ -137,6 +137,13 @@ p{
 /***********    Registration    *********/
 /****************************************/
 
+#form-div{
+}
+label{
+    /*text-align: right;*/
+    /*display: block;*/
+}
+
 .form-style{
     width:450px;
     padding:30px;
