@@ -1,42 +1,42 @@
 $(function(){
-    console.log("Loaded");
-    // var email = "";
-    // var emailConfirm = "";
-    // var firstName = "";
-    // var lastName = "";
-    // var password = "";
-    // var passwordConfirm = "";
-    // var dob = "";
-    // // var profilePic = "";
 
+    var validate = function(formData){
+        var validate_firstName = /^[A-Za-z\u2000-\u206F\u2E00-\u2E7F]{1,36}$/;
+        var validate_lastName = /^[A-Za-z\u2000-\u206F\u2E00-\u2E7F]{1,36}$/;
+        var validate_email = /^[A-Za-z0-9_\p{L}]+@([A-Za-z0-9_]+\.)+[A-Za-z0-9_]{1,16}$/
+        var validate_password = /^[A-Za-z0-9_@+\-@#$!%\^&*(){}[\]]{8,36}$/;
+        var validate_dateOfBirth = /^([1-9][0-9][0-9][0-9])-(((01-|03-|05-|07-|08-|10-|12-)(([0-2][0-9])|(3[01])))|((04-|06-|09-|11-)(([0-2][0-9])|(30)))|((02-)(([0-1][0-9])|(2[0-8]))))$/;
+        var validate_dateOfBirth2 = /^([1-9][0-9][0-9][0-9])-(((01-|03-|05-|07-|08-|10-|12-)(([0-2][0-9])|(3[01])))|((04-|06-|09-|11-)(([0-2][0-9])|(30)))|((02-)([0-2][0-9])))$/;
 
-    function signUp(){
-        console.log('Clicked');
-        testCall();
+        console.log(validate_firstName.test(formData.firstName));
+        console.log(validate_lastName.test(formData.lastName));
+        console.log(validate_email.test(formData.email));
+        console.log(validate_password.test(formData.password));
+        console.log(validate_dateOfBirth.test(formData.dateOfBirth));
+
     }
 
-    function testCall(){
-        $.ajax({
-            url: "http://www.nullster.com/ssds/19EA4B39-2221-45CD-A954-2281000AEDBE0EF/ept/modules/server/1.00/user/create",
-            type: 'get',
-            success: function(){
-                console.log("made it");
-            },
-            error: function(){
-                console.log("error");
-            }
-        })
-    }
+    $("form").on("submit",function(event){
+        event.preventDefault();
 
-    // $("#signUp").on("click", signUp());
+        // These are the variables recieving the form inputs
+        var $newAccountEmail = $("input[name=email]").val();
+        var $newAccountFirstName = $("input[name=firstName]").val();
+        var $newAccountLastName = $("input[name=lastName]").val();
+        var $newAccountPassword = $("input[name=password]").val();
+        var $newAccountConfirmPassword = $("input[name=confirmPassword]").val();
+        var $newAccountDateOfBirth = $("input[name=dateOfBirth]").val();
+        // var newAccountProfilePic = $("input[name=profilePic]").val();
 
-
-    // using XMLHttpRequest
-    // var xhr = new XMLHttpRequest();
-    // xhr.open("GET", "http://www.nullster.com/ssds/19EA4B39-2221-45CD-A954-2281000AEDBE0EF/ept/modules/server/", true);
-    // xhr.onload = function () {
-    //     console.log(xhr.responseText);
-    // };
-    // xhr.send();
+        var formData = {
+            "email": $newAccountEmail,
+            "password": $newAccountPassword,
+            "confirmPassword": $newAccountConfirmPassword,
+            "firstName": $newAccountFirstName,
+            "lastName": $newAccountLastName,
+            "dateOfBirth": $newAccountDateOfBirth
+        };
+        validate(formData);
+    });
 
 });
