@@ -21,6 +21,10 @@ $(function(){
             "lastName": $newAccountLastName,
             "dateOfBirth": $newAccountDateOfBirth
         };
+        // if ($('#submit') == true){
+        //     console.log(#submit)
+        // }
+
         validate(formData);
 
         if(validate(formData) == true){
@@ -84,28 +88,18 @@ $(function(){
     }
 
     var registrationCall = function(formData){
-        // $.ajax({
-        //     type: 'POST',
-        //     url: "http://www.nullster.com/ssds/19EA4B39-2221-45CD-A954-2281000AEDBE0EF/ept/redpill/modules/server/user/create",
-        //     data: formData,
-        //     success: function(response){
-        //         console.log(response)
-        //     },
-        //     error: function(){
-        //         console.log(formData);
-        //         console.log("There was an error submitting comment");
-        //     }
-        // })
         $.ajax({
-            type: "GET",
-            url: 'http://www.nullster.com/ssds/19EA4B39-2221-45CD-A954-2281000AEDBE0EF/ept/redpill/modules/server/user/touch',
+            type: 'POST',
+            url: "http://www.nullster.com/ssds/19EA4B39-2221-45CD-A954-2281000AEDBE0EF/ept/redpill/modules/server/user/create",
+            data: formData,
             success: function(response){
                 console.log(response)
             },
-            error: function() {
-                console.log('error')
+            error: function(){
+                console.log(formData);
+                console.log("There was an error submitting comment");
             }
-        });
+        })
     }
 
 });
