@@ -1,30 +1,21 @@
 /****************************************/
-/***********   Footer Styling   *********/
-/****************************************/
-
-footer {
-    margin-top: 50px;
-    margin-bottom: 0;
-}
-
-/****************************************/
 /***********   Navbar Styling   *********/
 /****************************************/
-
+div#header{
+    background-color: rgba(110,110,100,1);
+    color: black;
+    }
 div.navbar{
     margin-bottom: 0;
+    height: 80px;
 }
 
-/*Aligns links to the right */
-div#mainNavigation > ul{
-    /*float: right;*/
+.navbar-right{
+    margin-right: 0;
+    padding: 10px;
 }
-/*Vertically Aligns the nav links*/
-div#mainNavigation > ul > li > a{
-    /*padding-bottom: 0;*/
-    letter-spacing: .09em;
-    padding-top: 23px;
-    font-size: 16px;
+img{
+    width: 120px;
 }
 /****************************************/
 /*********   Drop Down Styling   ********/
@@ -93,8 +84,7 @@ div.row{
 }
 
 .spacing{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 /*Center text*/
@@ -109,26 +99,6 @@ a.center-a{
     display: block;
     font-size: 20px;
 }
-
-/*Adds margins to rows to even out styling*/
-.marginContent{
-    margin-top: 5vh;
-    margin-bottom: 10vh;
-}
-
-/*app icon sizing & styling*/
-.AppStoreIcon{
-    margin-top: 25px;
-    width: 250px;
-}
-
-/*Horizontal Rule styling*/
-hr{
-    border: black solid 1px;
-    width: 100%;
-    max-width:1262px;
-}
-
 p{
     font-size: 16px;
 }
@@ -143,8 +113,9 @@ p{
     width: 100%;
 }
 .label-styling-2{
-    width: 100%;
+    width: 80%;
     display: inline-flex;
+
 }
 #submit{
     width: 50%;
@@ -152,5 +123,10 @@ p{
 input{
     /*background-color: blue;*/
     width:100%;
+    height: 40px;
+    border-radius: 5px;
     /*display: block;*/
 };
+
+.loginForm{
+}
