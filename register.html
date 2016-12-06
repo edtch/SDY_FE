@@ -18,14 +18,14 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                     </div>
                     <div class="navbar navbar-right">
-                        <form class="loginForm" method="post">
-                            <label class="">
-                                <input type="email" name="username" placeholder="Username / Email" class="">
-                            </label>
-                            <label class="">
-                                <input type="password" name="password" placeholder="Password" >
-                            </label>
-                            <input type="submit" id="login">
+                        <form class="loginForm">
+                            <div class="form-group">
+                                <label class="label-styling">
+                                    <input class="loginInputs" type="email" name="loginUsername" placeholder="Username / Email">
+                                    <input class="loginInputs" type="password" name="loginPassword" placeholder="Password">
+                                    <input class="loginInputs" type="submit" id="login">
+                                </label>
+                            </div>
                         </form>
                     </div>
                 <!-- /.navbar-collapse -->
@@ -56,7 +56,7 @@
                             <label class="label-styling"><input type="password" name="newAccountPassword" placeholder="Password"/><span hidden="true" id="errorPassword" class="errorSpan">!</span>
                             <input type="password" name="newAccountPasswordConfirm" placeholder="Confirm Password"/><span hidden="true" id="errorConfirmPassword" class="errorSpan">!</span></label><br>
                         </div>
-                        
+
                         <div class="form-group">
                             <label class="label-styling-2"><input type="date" name="dateOfBirth" placeholder="Date of Birth"/><span hidden="true" id="errorDateOfBirth" class="errorSpan">!</span></label>
                             <label class="label-styling"><input type="file" name="newAccountProfilePicture"/><span hidden="true" id="errorUserFile" class="errorSpan">!</span></label>
