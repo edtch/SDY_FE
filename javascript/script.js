@@ -7,19 +7,19 @@ $(function(){
     //
     // This the Registration function activated on submit
     //
-    $("#registrationForm").on("submit",function(event){
+    $("#submit").on("click",function(event){
         event.preventDefault();
+        var data = {};
 
         // These are the variables recieving the form inputs
-        var $newAccountEmail = $("input[name=newAccountEmail]").val();
-        var $newAccountEmailConfirm = $("input[name=newAccountEmailConfirm]").val();
-        var $newAccountFirstName = $("input[name=newAccountFirstName]").val();
-        var $newAccountLastName = $("input[name=newAccountLastName]").val();
-        var $newAccountPassword = $("input[name=newAccountPassword]").val();
-        var $newAccountPasswordConfirm = $("input[name=newAccountPasswordConfirm]").val();
-        var $newAccountDOB = $("input[name=newAccountDOB]").val();
-        // console.log($("input[name=privacy-checkbox]").val());
-        var $newAccountProfilePicture = $("input[name=newAccountProfilePicture]").val();
+        // var $newAccountEmail = $("input[name=newAccountEmail]").val();
+        // var $newAccountEmailConfirm = $("input[name=newAccountEmailConfirm]").val();
+        // var $newAccountFirstName = $("input[name=newAccountFirstName]").val();
+        // var $newAccountLastName = $("input[name=newAccountLastName]").val();
+        // var $newAccountPassword = $("input[name=newAccountPassword]").val();
+        // var $newAccountPasswordConfirm = $("input[name=newAccountPasswordConfirm]").val();
+        // var $newAccountDOB = $("input[name=dateOfBirth]").val();
+        // var $newAccountProfilePicture = $("input[name=newAccountProfilePicture]").val();
 
         var formData = new FormData();
 
@@ -29,19 +29,19 @@ $(function(){
         formData.append("newAccountPasswordConfirm", $newAccountPasswordConfirm);
         formData.append("newAccountFirstName", $newAccountFirstName);
         formData.append("newAccountLastName", $newAccountLastName);
-        // formData.append("newAccountDOB", $newAccountDOB);
+        formData.append("newAccountDOB", $newAccountDOB);
         formData.append("newAccountProfilePicture", $newAccountProfilePicture);
+        formData.delete("privacy-checkbox");
 
-        console.log(formData.get('newAccountEmail'));
-        console.log(formData.get('newAccountEmailConfirm'));
-        console.log(formData.get('newAccountPassword'));
-        console.log(formData.get('newAccountPasswordConfirm'));
-        console.log(formData.get('newAccountFirstName'));
-        console.log(formData.get('newAccountLastName'));
-        // console.log(formData.get('newAccountPassword');
+        // console.log(formData.get('newAccountEmail'));
+        // console.log(formData.get('newAccountEmailConfirm'));
+        // console.log(formData.get('newAccountPassword'));
+        // console.log(formData.get('newAccountPasswordConfirm'));
+        // console.log(formData.get('newAccountFirstName'));
+        // console.log(formData.get('newAccountLastName'));;
+
 
         if ($("input[name=privacy-checkbox]").is(":checked")){
-
             validateRegistration(formData);
 
         }else{
