@@ -1,25 +1,34 @@
 $(function(){
 
     $("#loginForm").on("submit",function(event){
+        event.preventDefault();
+        var $username = $("input[name=loginUsername]").val();
+        var $password = $("input[name=loginPassword]").val();
 
-    })
+        var loginData = new FormData();
+
+        loginData.append("username", $username);
+        loginData.append("password", $password);
+        validateLogin(loginData);
+
+    });
 
     //
     // This the Registration function activated on submit
     //
     $("#submit").on("click",function(event){
         event.preventDefault();
-        var data = {};
+        // var data = {};
 
         // These are the variables recieving the form inputs
-        // var $newAccountEmail = $("input[name=newAccountEmail]").val();
-        // var $newAccountEmailConfirm = $("input[name=newAccountEmailConfirm]").val();
-        // var $newAccountFirstName = $("input[name=newAccountFirstName]").val();
-        // var $newAccountLastName = $("input[name=newAccountLastName]").val();
-        // var $newAccountPassword = $("input[name=newAccountPassword]").val();
-        // var $newAccountPasswordConfirm = $("input[name=newAccountPasswordConfirm]").val();
+        var $newAccountEmail = $("input[name=newAccountEmail]").val();
+        var $newAccountEmailConfirm = $("input[name=newAccountEmailConfirm]").val();
+        var $newAccountFirstName = $("input[name=newAccountFirstName]").val();
+        var $newAccountLastName = $("input[name=newAccountLastName]").val();
+        var $newAccountPassword = $("input[name=newAccountPassword]").val();
+        var $newAccountPasswordConfirm = $("input[name=newAccountPasswordConfirm]").val();
         // var $newAccountDOB = $("input[name=dateOfBirth]").val();
-        // var $newAccountProfilePicture = $("input[name=newAccountProfilePicture]").val();
+        var $newAccountProfilePicture = $("input[name=newAccountProfilePicture]").val();
 
         var formData = new FormData();
 
@@ -29,16 +38,8 @@ $(function(){
         formData.append("newAccountPasswordConfirm", $newAccountPasswordConfirm);
         formData.append("newAccountFirstName", $newAccountFirstName);
         formData.append("newAccountLastName", $newAccountLastName);
-        formData.append("newAccountDOB", $newAccountDOB);
+        // formData.append("newAccountDOB", $newAccountDOB);
         formData.append("newAccountProfilePicture", $newAccountProfilePicture);
-        formData.delete("privacy-checkbox");
-
-        // console.log(formData.get('newAccountEmail'));
-        // console.log(formData.get('newAccountEmailConfirm'));
-        // console.log(formData.get('newAccountPassword'));
-        // console.log(formData.get('newAccountPasswordConfirm'));
-        // console.log(formData.get('newAccountFirstName'));
-        // console.log(formData.get('newAccountLastName'));;
 
 
         if ($("input[name=privacy-checkbox]").is(":checked")){
@@ -49,6 +50,32 @@ $(function(){
         }
 
     });
+
+    //
+    //  Validation for login
+    //
+    var validateLogin = function(loginData){
+        var loginError = {};
+        var validate_email = /^[A-Za-z0-9_\p{L}]+@([A-Za-z0-9_]+\.)+[A-Za-z0-9_]{1,16}$/
+        var validate_password = /^[A-Za-z0-9_@+\-@#$!%\^&*(){}[\]]{8,36}$/;
+
+        switch (false){
+            case validate_email.test(loginData.get('username')):
+            case validate_password.test(loginData.get('password')):
+                loginError.account = "Username or password are incorrect! Please try again!"
+                // $('#errorPassword').text(error.password);
+                // $('#errorPassword').show()
+                console.log(loginError.account);
+
+                break
+            default:
+                console.log("Login is clear")
+                // $(".errorSpan").hide();
+                loginCall(loginData);
+
+                break
+        }
+    }
 
     //
     //  Validation for registration
@@ -110,6 +137,23 @@ $(function(){
                 break
         }
     }
+
+    var loginCall = function(loginData){
+        $.ajax({
+            url: "http://www.nullster.com/ssds/19EA4B39-2221-45CD-A954-2281000AEDBE0EF/ept/redpill/modules/server/user/login.php",
+            processData: false,
+            type: "POST",
+            data: loginData,
+            success: function(response){
+                console.log(response)
+            },
+            error: function(response){
+                console.log(loginData);
+                console.log("There was an error submitting comment");
+            }
+        });
+    }
+
     //
     // Ajax post to Shready API registration (...user/create.php)
     //
@@ -117,17 +161,16 @@ $(function(){
         $.ajax({
             url: "http://www.nullster.com/ssds/19EA4B39-2221-45CD-A954-2281000AEDBE0EF/ept/redpill/modules/server/user/create.php",
             processData: false,
-            contentType: false,
+            // contentType: false,
             type: 'POST',
             data: formData,
             success: function(response){
                 console.log(response)
             },
             error: function(response){
-                console.log(formData);
                 console.log("There was an error submitting comment");
             }
-        })
+        });
     }
 
 });

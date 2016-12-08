@@ -5,7 +5,6 @@
         <title>Skater's Name</title>
         <link rel="stylesheet" href="css/normalize.css" media="screen" title="no title">
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title">
         <link rel="stylesheet" href="css/register.css" media="screen" title="no title">
     </head>
@@ -18,7 +17,7 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                     </div>
                     <div class="navbar navbar-right">
-                        <form class="loginForm">
+                        <form id="loginForm">
                             <div class="form-group">
                                 <label class="label-styling">
                                     <input class="loginInputs" type="email" name="loginUsername" placeholder="Username / Email">
@@ -36,43 +35,43 @@
         <!-- Page Content -->
         <div class="container-fluid">
 
-            <div class="row">
-                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
 
-                </div>
-
-                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                    <h1 id="formTitle">Sign up for free!</h1>
-                    <form id="registrationForm" class="spacing">
-
-                        <div class="form-group">
-                            <label class="label-styling"><input type="text" name="newAccountFirstName" placeholder="First Name" class=""/><span hidden="true" id="errorFirstName" class="errorSpan">!</span>
-                            <input type="text" name="newAccountLastName" placeholder="Last Name" class=""/><span hidden="true" id="errorLastName" class="errorSpan">!</span></label>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="label-styling"><input type="email" name="newAccountEmail" placeholder="Email Address"/> <span hidden="true" id="errorEmail" class="errorSpan">!</span>
-                            <input type="email" name="newAccountEmailConfirm" placeholder="Confirm Email"/> <span hidden="true" id="errorEmail" class="errorSpan">!</span></label><br>
-                            <label class="label-styling"><input type="password" name="newAccountPassword" placeholder="Password"/><span hidden="true" id="errorPassword" class="errorSpan">!</span>
-                            <input type="password" name="newAccountPasswordConfirm" placeholder="Confirm Password"/><span hidden="true" id="errorConfirmPassword" class="errorSpan">!</span></label><br>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="label-styling-2"><input type="date" name="dateOfBirth"/><span hidden="true" id="errorDateOfBirth" class="errorSpan">!</span></label>
-                            <label class="label-styling"><input type="file" name="newAccountProfilePicture"/><span hidden="true" id="errorUserFile" class="errorSpan">!</span></label>
-                        </div>
-
-                        <div class="form-group spacing">
-                            <label class="label-styling"><input type="submit" id="submit"/></label><span>
-                            <input type="checkbox" name="privacy-checkbox"/>You agree to our Terms and Policy.</span>
-                        </div>
-                    </form>
-                </div>
+            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 center">
 
             </div>
 
-            <!-- Footer -->
-            <!-- Eof Footer -->
+            <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 center spacing">
+
+                <h1 id="formTitle">Sign up for free!</h1>
+
+                <form id="registrationForm" class="spacing">
+
+                    <div class="form-group spacing">
+                        <label class="label-styling"><input class="margin" type="text" name="newAccountFirstName" placeholder="First Name" class=""/><span hidden="true" id="errorFirstName" class="errorSpan">!</span>
+                        <input class="margin" type="text" name="newAccountLastName" placeholder="Last Name" class=""/><span hidden="true" id="errorLastName" class="errorSpan">!</span></label>
+                    </div>
+
+                    <div class="form-group spacing">
+                        <label class="label-styling"><input class="margin" type="email" name="newAccountEmail" placeholder="Email Address"/> <span hidden="true" id="errorEmail" class="errorSpan">!</span>
+                        <input class="margin" type="email" name="newAccountEmailConfirm" placeholder="Confirm Email"/> <span hidden="true" id="errorEmail" class="errorSpan">!</span></label><br>
+                    </div>
+
+                    <div class="form-group spacing">
+                        <label class="label-styling"><input class="margin" type="password" name="newAccountPassword" placeholder="Password"/><span hidden="true" id="errorPassword" class="errorSpan">!</span>
+                        <input class="margin" type="password" name="newAccountPasswordConfirm" placeholder="Confirm Password"/><span hidden="true" id="errorConfirmPassword" class="errorSpan">!</span></label><br>
+                    </div>
+                        <!-- <div class="form-group"> -->
+                            <!-- <label class="label-styling-2"><input type="date" name="dateOfBirth"/><span hidden="true" id="errorDateOfBirth" class="errorSpan">!</span></label> -->
+                            <!-- <label class="label-styling"><input type="file" name="newAccountProfilePicture"/><span hidden="true" id="errorUserFile" class="errorSpan">!</span></label> -->
+                        <!-- </div> -->
+
+
+                    <div class="spacing">
+                        <label class="label-styling spacing"><input type="submit" id="submit"/></label><span>
+                        <input type="checkbox" name="privacy-checkbox"/>You agree to our Terms and Policy.</span>
+                    </div>
+                </form>
+            </div>
 
         </div>
     <!-- Eof Page Content -->

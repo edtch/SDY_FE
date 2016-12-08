@@ -7,7 +7,11 @@ div#header{
     }
 div.navbar{
     margin-bottom: 0;
-    height: 80px;
+    height: 75px;
+}
+
+div#brand{
+margin-left: 110px;
 }
 
 .navbar-right{
@@ -18,7 +22,7 @@ img{
     width: 120px;
 }
 /****************************************/
-/***********Page Content Styling*********/
+ /***********  General Styling  *********/
 /****************************************/
 
 /*Aligns width with rest of the page*/
@@ -28,7 +32,7 @@ div.row{
 }
 
 .spacing{
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 /*Center text*/
@@ -51,30 +55,41 @@ p{
 /***********    Registration    *********/
 /****************************************/
 #formTitle{
-    text-align: left;
-}
-.label-styling{
-    width: 100%;
-}
-.label-styling-2{
     text-align: center;
 }
-#submit{
-    width: 50%;
+label.label-styling{
+    width: 100%;
 }
-...input{
-    /*background-color: blue;*/
-    width:100%;
-    height: 40px;
-    border-radius: 5px;
-    /*display: block;*/
-};
+label.label-styling-2{
+    text-align: center;
+}
+input#submit{
+    width: 20%;
+}
+
+/****************************************/
+/***********    Login Form      *********/
+/****************************************/
 
 input#login{
     /*background-image: ;*/
 }
+input[type=file]{
+    /*display:inline;*/
+}
+
+form#registrationForm{
+    /*background-color: green;*/
+}
 div.navbar-right{
     width: 450px;
     padding-top: 25px;
-    margin-right: 128px;
+    margin-right: 120px;
+}
+input.margin{
+    margin: 0 10px;
+    width: 40%;
+    border-radius: 5px;
+    box-shadow: 1px 1px black;
+    text-align: center;
 }
