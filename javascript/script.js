@@ -22,7 +22,7 @@ $(function(){
 
         // These are the variables recieving the form inputs
         var $newAccountEmail = $("input[name=newAccountEmail]").val();
-        var $newAccountEmailConfirm = $("input[name=newAccountEmailConfirm]").val();
+        // var $newAccountEmailConfirm = $("input[name=newAccountEmailConfirm]").val();
         var $newAccountFirstName = $("input[name=newAccountFirstName]").val();
         var $newAccountLastName = $("input[name=newAccountLastName]").val();
         var $newAccountPassword = $("input[name=newAccountPassword]").val();
@@ -33,7 +33,7 @@ $(function(){
         var formData = new FormData();
 
         formData.append("newAccountEmail", $newAccountEmail);
-        formData.append("newAccountEmailConfirm", $newAccountEmailConfirm);
+        // formData.append("newAccountEmailConfirm", $newAccountEmailConfirm);
         formData.append("newAccountPassword", $newAccountPassword);
         formData.append("newAccountPasswordConfirm", $newAccountPasswordConfirm);
         formData.append("newAccountFirstName", $newAccountFirstName);
@@ -161,7 +161,7 @@ $(function(){
         $.ajax({
             url: "http://www.nullster.com/ssds/19EA4B39-2221-45CD-A954-2281000AEDBE0EF/ept/redpill/modules/server/user/create.php",
             processData: false,
-            // contentType: false,
+            contentType: false,
             type: 'POST',
             data: formData,
             success: function(response){
