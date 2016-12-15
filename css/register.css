@@ -2,7 +2,7 @@
 /***********   Navbar Styling   *********/
 /****************************************/
 div#header{
-    background-color: rgba(110,110,100,1);
+    /*background-color: rgba(110,110,100,1);*/
     color: black;
     }
 div.navbar{
@@ -24,6 +24,11 @@ img{
 /****************************************/
  /***********  General Styling  *********/
 /****************************************/
+html, body{
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(rgba(110,110,100,1),rgba(110,110,100,.2));
+}
 
 /*Aligns width with rest of the page*/
 div.row{
@@ -32,7 +37,8 @@ div.row{
 }
 
 .spacing{
-    margin: 30px 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /*Center text*/
@@ -50,18 +56,20 @@ a.center-a{
 p{
     font-size: 16px;
 }
+.form-group{
+    margin-bottom: 0;
+}
 
 /****************************************/
 /***********    Registration    *********/
 /****************************************/
 #formTitle{
     text-align: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
 }
 label.label-styling{
     width: 100%;
-}
-label.label-styling-2{
-    text-align: center;
 }
 input#submit{
     width: 20%;
@@ -77,9 +85,10 @@ input#login{
 input[type=file]{
     /*display:inline;*/
 }
-
 form#registrationForm{
     /*background-color: green;*/
+    border: 5px solid black;
+    border-radius: 10px;
 }
 div.navbar-right{
     width: 450px;
@@ -88,8 +97,26 @@ div.navbar-right{
 }
 input.margin{
     margin: 0 10px;
-    width: 40%;
+    width: 60%;
     border-radius: 5px;
     box-shadow: 1px 1px black;
     text-align: center;
+}
+#formDiv{
+    padding-left: 0;
+    padding-right: 0;
+    float: none;
+    margin: 0 auto;
+}
+
+.outer {
+    display: table;
+    height: 100%;
+    width: 100%;
+    /*background: -webkit-linear-gradient(rgba(110,110,100,1),rgba(110,110,100,.2));*/
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
 }

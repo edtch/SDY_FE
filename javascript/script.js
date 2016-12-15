@@ -22,24 +22,24 @@ $(function(){
 
         // These are the variables recieving the form inputs
         var $newAccountEmail = $("input[name=newAccountEmail]").val();
-        // var $newAccountEmailConfirm = $("input[name=newAccountEmailConfirm]").val();
+        var $newAccountEmailConfirm = $("input[name=newAccountEmailConfirm]").val();
         var $newAccountFirstName = $("input[name=newAccountFirstName]").val();
         var $newAccountLastName = $("input[name=newAccountLastName]").val();
         var $newAccountPassword = $("input[name=newAccountPassword]").val();
         var $newAccountPasswordConfirm = $("input[name=newAccountPasswordConfirm]").val();
         // var $newAccountDOB = $("input[name=dateOfBirth]").val();
-        var $newAccountProfilePicture = $("input[name=newAccountProfilePicture]").val();
+        // var $newAccountProfilePicture = $("input[name=newAccountProfilePicture]").val();
 
         var formData = new FormData();
 
         formData.append("newAccountEmail", $newAccountEmail);
-        // formData.append("newAccountEmailConfirm", $newAccountEmailConfirm);
-        formData.append("newAccountPassword", $newAccountPassword);
-        formData.append("newAccountPasswordConfirm", $newAccountPasswordConfirm);
+        formData.append("newAccountEmailConfirm", $newAccountEmailConfirm);
         formData.append("newAccountFirstName", $newAccountFirstName);
         formData.append("newAccountLastName", $newAccountLastName);
+        formData.append("newAccountPassword", $newAccountPassword);
+        formData.append("newAccountPasswordConfirm", $newAccountPasswordConfirm);
         // formData.append("newAccountDOB", $newAccountDOB);
-        formData.append("newAccountProfilePicture", $newAccountProfilePicture);
+        // formData.append("newAccountProfilePicture", $newAccountProfilePicture);
 
 
         if ($("input[name=privacy-checkbox]").is(":checked")){
