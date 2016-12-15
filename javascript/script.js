@@ -1,7 +1,6 @@
 $(function(){
 
     $("#loginForm").on("submit",function(event){
-        event.preventDefault();
         var $username = $("input[name=loginUsername]").val();
         var $password = $("input[name=loginPassword]").val();
 
@@ -17,8 +16,6 @@ $(function(){
     // This the Registration function activated on submit
     //
     $("#submit").on("click",function(event){
-        event.preventDefault();
-        // var data = {};
 
         // These are the variables recieving the form inputs
         var $newAccountEmail = $("input[name=newAccountEmail]").val();
