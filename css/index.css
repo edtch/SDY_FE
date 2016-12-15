@@ -1,18 +1,13 @@
 /****************************************/
-/***********   Footer Styling   *********/
-/****************************************/
-
-footer {
-    margin-top: 50px;
-    margin-bottom: 0;
-}
-
-/****************************************/
 /***********   Navbar Styling   *********/
 /****************************************/
 
 div.navbar{
     margin-bottom: 0;
+    height: 75px;
+}
+div#header{
+    position: static;
 }
 
 /*Aligns links to the right */
@@ -27,6 +22,10 @@ div#mainNavigation > ul > li > a{
     font-size: 16px;
 }
 
+.searchBar{
+    width: 100%;
+    display: inline-block;
+}
 /****************************************/
 /*********   Drop Down Styling   ********/
 /****************************************/
@@ -82,7 +81,6 @@ div#mainNavigation > ul > li > a{
         border-top:0 none;
     }
 }
-
 /****************************************/
 /***********Page Content Styling*********/
 /****************************************/
@@ -113,8 +111,7 @@ a.center-a{
 
 /*Adds margins to rows to even out styling*/
 .marginContent{
-    margin-top: 5vh;
-    margin-bottom: 10vh;
+    display: inline-flex;
 }
 
 /*Horizontal Rule styling*/
@@ -126,4 +123,12 @@ hr{
 
 p{
     font-size: 16px;
+}
+
+.titleNews{
+    float: none;
+    flex-grow: 1
+    padding-left: 0;
+    padding-right: 0;
+    display: inline-block;
 }
