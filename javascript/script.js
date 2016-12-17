@@ -7,7 +7,10 @@ $(function(){
         var loginData = new FormData();
 
         loginData.append("username", $username);
-        loginData.append("password", $password);
+        loginData.append("passwd", $password);
+
+        console.log(loginData.get('username'));
+        console.log(loginData.get('passwd'));
         validateLogin(loginData);
 
     });
@@ -58,7 +61,7 @@ $(function(){
 
         switch (false){
             case validate_email.test(loginData.get('username')):
-            case validate_password.test(loginData.get('password')):
+            case validate_password.test(loginData.get('passwd')):
                 loginError.account = "Username or password are incorrect! Please try again!"
                 // $('#errorPassword').text(error.password);
                 // $('#errorPassword').show()
@@ -139,14 +142,13 @@ $(function(){
         $.ajax({
             url: "http://www.nullster.com/ssds/19EA4B39-2221-45CD-A954-2281000AEDBE0EF/ept/redpill/modules/server/user/login.php",
             processData: false,
+            xhrFields: {withCredentials: true},
+            contentType: false,
             type: "POST",
             data: loginData,
             success: function(response){
-                console.log(response)
-            },
-            error: function(response){
-                console.log(loginData);
-                console.log("There was an error submitting comment");
+                console.log(response);
+                location.href="http://localhost:8000/SDY_FE/index.html";
             }
         });
     }
@@ -163,9 +165,7 @@ $(function(){
             data: formData,
             success: function(response){
                 console.log(response)
-            },
-            error: function(response){
-                console.log("There was an error submitting comment");
+                location.href="http://localhost:8000/SDY_FE/index.html";
             }
         });
     }
