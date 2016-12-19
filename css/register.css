@@ -26,7 +26,6 @@ img{
 /****************************************/
 html, body{
     width: 100%;
-    height: 100%;
     background: -webkit-linear-gradient(rgba(110,110,100,1),rgba(110,110,100,.2));
 }
 
