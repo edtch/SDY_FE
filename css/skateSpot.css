@@ -1,119 +1,55 @@
 /****************************************/
 /***********   Navbar Styling   *********/
 /****************************************/
-
+#navDiv{
+    padding-top: 35px;
+}
 div.navbar{
-    /*margin-bottom: 0;*/
+    margin-bottom: 0;
+    height: 75px;
 }
-
-/*Aligns links to the right */
-div#mainNavigation > ul{
-    /*float: right;*/
+div#brand{
+    width: 100%;
+    height: 100%;
 }
-/*Vertically Aligns the nav links*/
-div#mainNavigation > ul > li > a{
-    /*padding-bottom: 0;*/
-    letter-spacing: .09em;
-    padding-top: 23px;
-    font-size: 16px;
+.navbar-right{
+    margin-right: 0;
+    padding: 10px;
 }
-
-/****************************************/
-/*********   Drop Down Styling   ********/
-/****************************************/
-
-#login-dp{
-    min-width: 270px;
-    padding-top: 10;
-    padding-bottom: 0;
-    overflow:hidden;
-    background-color:rgba(255,255,255,.8);
+img{
+    width: 120px;
+    margin-top: 50%;
+    display: block;
+    margin: 0 auto;
 }
-#login-dp .help-block{
-    font-size:14px
-}
-#login-dp .bottom{
-    background-color:rgba(255,255,255,.8);
-    border-top:1px solid #ddd;
-    clear:both;
-    padding:14px;
-}
-#login-dp .social-buttons{
-    margin:12px 0
-}
-#login-dp .social-buttons a{
-    width: 49%;
-}
-#login-dp .form-group {
-    margin-bottom: 10px;
-}
-.btn-fb{
-    color: #fff;
-    background-color:#3b5998;
-}
-.btn-fb:hover{
-    color: #fff;
-    background-color:#496ebc
-}
-.btn-tw{
-    color: #fff;
-    background-color:#55acee;
-}
-.btn-tw:hover{
-    color: #fff;
-    background-color:#59b5fa;
-}
-@media(max-width:768px){
-    #login-dp{
-        background-color: inherit;
-        color: #fff;
-    }
-    #login-dp .bottom{
-        background-color: inherit;
-        border-top:0 none;
-    }
-}
-
 /****************************************/
 /***********Page Content Styling*********/
 /****************************************/
-
+html, body{
+    width: 100%;
+    /*height: 100%;*/
+    background: -webkit-linear-gradient(rgba(110,110,100,1),rgba(110,110,100,.2));
+}
 /*Aligns width with rest of the page*/
 div.row{
-    /*margin-left: 0px;*/
-    /*margin-right: 0px;*/
+    margin-left: 0px;
+    margin-right: 0px;
 }
-
 .spacing{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
 /*Center text*/
 .center{
     text-align: center;
 }
-
 /*Center links*/
-a.center-a{
+.center-a{
     margin: 0 auto;
     text-align: center;
     display: block;
     font-size: 20px;
 }
-
-/*Adds margins to rows to even out styling*/
-.marginContent{
-    margin-top: 5vh;
-    margin-bottom: 10vh;
-}
-
-/*app icon sizing & styling*/
-.AppStoreIcon{
-    margin-top: 25px;
-    width: 250px;
-}
-
 /*Horizontal Rule styling*/
 hr{
     border: black solid 1px;
@@ -125,14 +61,17 @@ p{
     font-size: 16px;
 }
 
-/****************************************/
-/***********Page Content Styling*********/
-/****************************************/
-
-#userInfoDiv{
-    /*background-color: lightblue;*/
+.feedWrapper{
+    border: solid green 5px;
+    width: 100%;
+    height: 250px;
+    display: block;
+    /*margin: 30px 0;*/
 }
-
-.profileInfo{
-    /*background: blue;*/
+.feedBox{
+    height: 250px;
+    width: 50%;
+    /*margin: 0 auto;*/
+    border: solid red 5px;
+    background-color: black;
 }

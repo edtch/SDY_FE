@@ -148,7 +148,7 @@ $(function(){
             data: loginData,
             success: function(response){
                 console.log(response);
-                location.href="http://localhost:8000/SDY_FE/index.html";
+                window.location.replace("http://localhost:8000/SDY_FE/index.html");
             }
         });
     }
@@ -165,7 +165,7 @@ $(function(){
             data: formData,
             success: function(response){
                 console.log(response)
-                location.href="http://localhost:8000/SDY_FE/index.html";
+                window.location.replace("http://localhost:8000/SDY_FE/index.html");
             }
         });
     }
