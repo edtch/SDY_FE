@@ -1,6 +1,7 @@
 $(function(){
 
     $("#loginForm").on("submit",function(event){
+        event.preventDefault()
         var $username = $("input[name=loginUsername]").val();
         var $password = $("input[name=loginPassword]").val();
 
@@ -19,6 +20,7 @@ $(function(){
     // This the Registration function activated on submit
     //
     $("#submit").on("click",function(event){
+        event.preventDefault()
 
         // These are the variables recieving the form inputs
         var $newAccountEmail = $("input[name=newAccountEmail]").val();
@@ -142,7 +144,6 @@ $(function(){
         $.ajax({
             url: "http://www.nullster.com/ssds/19EA4B39-2221-45CD-A954-2281000AEDBE0EF/ept/redpill/modules/server/user/login.php",
             processData: false,
-            xhrFields: {withCredentials: true},
             contentType: false,
             type: "POST",
             data: loginData,
