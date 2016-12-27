@@ -143,10 +143,11 @@ $(function(){
     var loginCall = function(loginData){
         $.ajax({
             url: "http://www.nullster.com/ssds/19EA4B39-2221-45CD-A954-2281000AEDBE0EF/ept/redpill/modules/server/user/login.php",
-            processData: false,
-            contentType: false,
             type: "POST",
             data: loginData,
+            // crossDomain: true,
+            processData: false,
+            contentType: false,
             success: function(response){
                 console.log(response);
                 window.location.replace("http://localhost:8000/SDY_FE/index.html");

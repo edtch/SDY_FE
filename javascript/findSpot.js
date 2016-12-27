@@ -19,14 +19,15 @@ $(function(){
         $countryCode = $("input[name=countryCode]").val()
 
         searchData.append('mode', $mode);
-        searchData.append('spotName', $spotName);
-        searchData.append('countryCode', $countryCode);
+        searchData.append('cityCode', 0);
+        searchData.append('spotname', $spotName);
+        // searchData.append('countryCode', 1);
 
         console.log($("option:selected").val())
 
         console.log($("input[name=spotName]").val())
 
-        console.log($("input[name=countryCode]").val())
+        // console.log($("input[name=countryCode]").val())
 
         spotMapCall(searchData);
     })
