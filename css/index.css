@@ -16,7 +16,7 @@ div#brand{
     margin-right: 0;
     padding: 10px;
 }
-img{
+img#logo{
     width: 120px;
     margin-top: 50%;
     display: block;
@@ -81,8 +81,30 @@ p{
 }
 .feedBox{
     height: 240px;
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
     border: solid red 5px;
-    background-color: black;
+    background-color: white;
+    flex: auto;
+}
+
+.feedStatus{
+    border: solid 1px blue;
+    display: inline-block;
+    height: 230px;
+    padding-bottom: 5px;
+    width: 75%;
+    float: right;
+    /*flex-grow: 1;*/
+}
+
+.feedUserImage{
+    /*flex-grow: 1;*/
+    display: inline-flex;
+    height: 100%;
+}
+
+.userProPic{
+    height: 50%;
+    /*width: 70%;*/
 }
